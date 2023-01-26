@@ -1,14 +1,21 @@
 package fraccion;
-
-// Clase que define una fracción
+/**
+ * Utilizaremos la clase Fraccion para operar con fracciones
+ * @author mcosano
+ *
+ */
 public class Fraccion {
-	// Numerador
+	// Variable que será el numerador de la fracción
 	private int num;
 
-	// Denominador
+	// Variable que será el denominador de la fracción
 	private int den;
 
-	// Constructor por defecto
+	/**
+	 * 
+	 * Para generar valaros neutros
+	 * 
+	 */
 
 	public Fraccion() { // debe generar el valor neutro que es 0/1
 		num = 0;
@@ -16,7 +23,11 @@ public class Fraccion {
 
 	}
 
-	// Constructor con parámetros
+	/**
+	 * Lo utilizaremos para evitar que exista el 0 como divisor ya que eso generaría operaciones con el infinito
+	 * @param num
+	 * @param den
+	 */
 	public Fraccion(int num, int den) {
 		// debo evitar crear fracciones con 0 en el divisor
 		this.num = num;
@@ -24,32 +35,47 @@ public class Fraccion {
 			this.den = 1;
 		else
 			this.den = den;
-		// devuelvo la fracci�n simplificada
+		// devuelvo la fraccion simplificada
 		simplificar();
 	}
 
-	// Constructor copia
+	/**
+	 * Encargado de la fracción final
+	 * @param f
+	 */
 	public Fraccion(final Fraccion f) {
 		num = f.num;
 		den = f.den;
 	}
 
-	// getters y setters
+	/**
+	 * 
+	 * @param num
+	 */
 
 	public void setNum(int num) {
 		this.num = num;
 
 	}
-
+	/**
+	 * Lo utilizaremos para mostrar el numerador
+	 * @return
+	 */
 	public int getNum() {
 		return num;
 
 	}
-
+	/**
+	 * 
+	 * @param den
+	 */
 	public void setDen(int den) {
 		this.den = den;
 	}
-
+	/**
+	 * Lo utilizaremos para mostrar el denominador
+	 * @return
+	 */
 	public int getDen() {
 		return den;
 	}
